@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'NotoSansMono-Regular';
+    src: url('../fonts/NotoSansMono-Regular.ttf');
+    font-weight: bold;
+}
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'NotoSansMono-Regular';
+
+}
+
+html{
+    background-image: url("../img/1614389592_28-p-temnii-kosmicheskii-fon-30.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+:root{
+    --color-text-three: #d31a1e;
+    --color-input:#24242b;
+    --color-background-three:#3e6c45;
+    --color-one-background:#2f2f3b;
+    --color-one-text:#ffffff;
+    --color-border-one: #fff;
+    --color-select-punct:#404040;
+    --color-unselect-punct:#202020;
+    --color-selecter:#464966;
+    --color-two-text:#6d6d6d;
+    --color-menu:#464966;
+}
+body{
+    width: 800px;
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: var(--color-one);
+    display: flex;
+    flex-direction: column;
+    margin: auto; 
+}
+
+/* Общии стили */
+
+
+
+/* Стили шапки */
+
+.cheksMenu{
+    justify-content: space-between;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+.cheksMenu a{
+    text-decoration: none;
+    color: var(--color-one-text);
+    padding: 10px;
+    width: 20%;
+    background: var(--color-one-background);
+    border: 2px solid var(--color-border-one);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuPlayer{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+.menuPlayer a{
+    background: var(--color-unselect-punct);
+    text-decoration: none;
+    padding: 5px;
+    font-size: 15px;
+    color: var(--color-two-text);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.selectedMenu{
+    background: var(--color-select-punct) !important;
+    color: var(--color-one-text) !important;
+    border-bottom: none;
+}
+.logo_and_h{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: var(--color-one-text);
+    padding: 5px;
+    background: var(--color-one-background);
+    border: 2px solid var(--color-border-one);
+    border-radius: 15px;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo_and_h img{
+    height: 50px;
+    margin-right: 10px;
+}
+.logo_and_h h1{
+    font-size: 16px;
+    background: linear-gradient(to right, #02fcec, #b400e0);
+    font-weight: bolder;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Кастомизация основного меню */
+.absolutContainForm{
+    display: flex;
+    flex-direction: row;
+    border-radius: 0px 0px 20px 20px;
+    width: 100%;
+    border: 2px solid var(--color-selecter);
+    background: var(--color-one-background);
+}
+.rightSelecter{
+    width: 29%;
+    padding: 10px;
+    border-right: 2px solid var(--color-selecter);
+    display: flex;
+    flex-direction: column;
+}
+.selectedPlayer{
+    width: 55%;
+    padding: 10px;
+}
+.rightSelecter form{
+    padding: 5px;
+    background: var(--color-menu);
+    margin-top: 10px;
+    color: var(--color-one-text);
+    display: block;
+    -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 15%, 100% 100%, 100% 100%, 10% 100%, 0% 90%, 0% 0%);
+    clip-path: polygon(0% 0%, 90% 0%, 100% 15%, 100% 100%, 100% 100%, 10% 100%, 0% 90%, 0% 0%);
+  
+}
+.rightSelecter form input{
+    float: left;
+    background: none;
+    border: none;
+    color: var(--color-one-text);
+}
+.rightSelecter form h3{
+    float: left;
+    font-size: 20px;
+    font-weight: 10;
+}
+.rightSelecter form button{
+    float: right;
+    width: 70px;
+    color: var(--color-one-text);
+    height: 40px;
+    background: var(--color-one-background);
+    -webkit-clip-path: polygon(0% 0%, 80% 0%, 100% 20%, 100% 100%, 100% 100%, 20% 100%, 0% 80%, 0% 0%);
+    clip-path: polygon(0% 0%, 80% 0%, 100% 20%, 100% 100%, 100% 100%, 20% 100%, 0% 80%, 0% 0%);
+}
+.selectForm{
+    background: var(--color-background-three) !important;
+}
+
+/* Кастомизация меню с данными */
+
+.selectedPlayer form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.selectedPlayer form input{
+    background: var(--color-input);
+    border: 2px solid var(--color-menu);
+    padding: 3px;
+    color: var(--color-one-text);
+}
+.warningName{
+    color: var(--color-text-three);
+    font-size: 14px;
+}
+.hName{
+    color: var(--color-one-text);
+    font-size: 18px;
+}
+.selectedPlayer form select{
+    width: 30%;
+    border: 2px solid var(--color-one-background);
+    background: var(--color-selecter);
+    padding: 2px;
+    color: var(--color-one-text);
+    outline: none;
+    
+}
+.selectedPlayer form h3{
+    color: var(--color-one-text);
+    font-size: 16px;
+}
+.selectedPlayer form label{
+    margin-left: 10%;
+    color: var(--color-one-text);
+    font-size: 14px;
+}
+
+.selectedPlayer form button{
+    width: 40%;
+    height: 50px;
+    background: var(--color-menu);
+    border: 2px solid var(--color-input);
+    margin: auto;
+    color: var(--color-one-text);
+
+}
+/* Кастомизация основного меню */
+
+/* Кастомизация страницы "О проекте" */
+
+.aboutProject{
+    display: block;
+    border-radius: 20px 20px 20px 20px;
+    width: 100%;
+    border: 2px solid var(--color-selecter);
+    background: var(--color-one-background);
+    padding: 20px;
+}
+.aboutProject h1{
+    float: left;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: var(--color-one-text);
+}
+.aboutProject p{
+    float: left;
+    font-size: 14px;
+    color: var(--color-one-text);
+}
+.aboutProject img{
+    float: right;
+    width: 250px;
+    height: 250px;
+    border: 4px solid var(--color-border-one);
+    margin-left: 10px;
+}
+/* Кастомизация страницы "О проекте" */
